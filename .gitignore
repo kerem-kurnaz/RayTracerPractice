@@ -1,0 +1,43 @@
+# --- Build Artifacts ---
+# This ignores the entire folder where CMake compiles your code
+build/
+bin/
+out/
+
+# --- Compiled Files ---
+# Ignores executables and object files
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# --- VS Code Specific ---
+# Ignores your personal VS Code settings and local history
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# --- Ray Tracing Outputs ---
+# This prevents your repository from getting filled with large image files
+*.ppm
+*.png
+*.jpg
+*.jpeg
+
+# --- Operating System Junk ---
+.DS_Store
+Thumbs.db
+RTInWeekend/x64/Debug
+.vs/RTInWeekend
+RTInWeekend/RTInWeekend.vcxproj
+RTInWeekend/RTInWeekend.vcxproj.filters
+RTInWeekend/RTInWeekend.vcxproj.user
+x64/Debug/RTInWeekend.pdb
+RTInWeekend.sln
