@@ -144,4 +144,12 @@ inline vec3 refract(const vec3& uv, const vec3& n, double etai_over_etat) {
     vec3 r_out_parallel = -std::sqrt(std::fabs(1.0 - r_out_perp.length_squared())) * n;
     return r_out_perp + r_out_parallel;
 }
+
+inline bool operator==(const vec3 &u, const vec3 &v) {
+    return (u.e[0] == v.e[0]) && (u.e[1] == v.e[1]) && (u.e[2] == v.e[2]);
+}
+
+inline bool operator!=(const vec3 &u, const vec3 &v) {
+    return !(u == v);
+}
 #endif

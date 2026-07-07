@@ -26,7 +26,6 @@ out/
 
 # --- Ray Tracing Outputs ---
 # This prevents your repository from getting filled with large image files
-*.ppm
 *.png
 *.jpg
 *.jpeg

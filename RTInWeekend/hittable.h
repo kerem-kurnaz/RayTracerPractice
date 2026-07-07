@@ -5,13 +5,16 @@
 #include "aabb.h"
 
 class material;
+class hittable;
 
 class hit_record {
-public:
+  public:
     point3 p;
     vec3 normal;
     shared_ptr<material> mat;
     double t;
+    const hittable* object = nullptr;
+    const hittable* top_level_object = nullptr;
     bool front_face;
 
     void set_face_normal(const ray& r, const vec3& outward_normal) {
@@ -30,6 +33,8 @@ public:
     virtual bool hit(const ray& r, interval ray_t, hit_record& rec) const = 0;
     
     virtual aabb bounding_box() const = 0;
+
+    virtual color get_emission() const { return color(0,0,0); }
 };
 
 #endif

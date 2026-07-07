@@ -52,11 +52,14 @@ public:
         vec3 outward_normal = (rec.p - current_center) / radius;
         rec.set_face_normal(r, outward_normal);
         rec.mat = mat;
+        rec.object = this;
 
         return true;
     }
 
     aabb bounding_box() const override { return bbox; }
+
+    color get_emission() const override { return mat->emitted(); }
 
 private:
     ray center;
